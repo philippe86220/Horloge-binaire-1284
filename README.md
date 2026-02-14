@@ -1,4 +1,4 @@
-# Horloge binaire – ATmega1284P + DS3231
+# Horloge binaire – ATmega1284 + DS3231
 
 **horloge binaire HH:MM:SS :**
 
