@@ -341,6 +341,7 @@ void concatener(...)
 - Une seule chaîne finale
 
 🎯 **Idée de base**  
+
 En langage C, une chaîne de caractères (`char[]`) n’est rien d’autre qu’une **suite de cases mémoire   
 contiguës,** chacune contenant un caractère.
 Par exemple, la chaîne `"`10"` est stockée en mémoire comme ceci :
