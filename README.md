@@ -321,7 +321,7 @@ Donc :
 
 ---
 
-4️⃣ Construction d’une chaîne binaire globale
+4️⃣ Construction d’une chaîne binaire globale  
 
 
 ```cpp
@@ -340,7 +340,7 @@ void concatener(...)
 - Pas de buffer temporaire
 - Une seule chaîne finale
 
-🎯 **Idée de base**
+🎯 **Idée de base**  
 En langage C, une chaîne de caractères (`char[]`) n’est rien d’autre qu’une **suite de cases mémoire   
 contiguës,** chacune contenant un caractère.
 Par exemple, la chaîne `"`10"` est stockée en mémoire comme ceci :
@@ -355,9 +355,9 @@ Le `'\0'` (zéro terminal) indique la fin de la chaîne.
 
 🧩 **Notre situation dans le programme**
 
-Nous avons plusieurs petits tableaux mémoire :
+Nous avons plusieurs petits tableaux mémoire :  
 
-```makefile
+```
 tabHeuresDizaine   = "10"
 tabHeuresUnite     = "0011"
 tabMinutesDizaine  = "101"
@@ -373,7 +373,7 @@ Le rôle de `concatener()` est **de remplir ce grand tableau en copiant les case
 
 ---
 
-🔎 **Étape 1 — Trouver la fin du tableau principal**  
+🔎 **Étape 1 — Trouver la fin du tableau principal**   
 Au début, tab1 contient déjà le premier morceau.
 
 Exemple :
