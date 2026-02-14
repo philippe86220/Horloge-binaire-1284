@@ -111,7 +111,7 @@ https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
 ### Configuration recommandée dans l’IDE Arduino
 
 - Board : ATmega1284 (MightyCore)
-- Variant : ATmega1284P
+- Variant : ATmega1284
 - Clock : Internal 8 MHz
 - Pinout : Standard pinout
 - BOD : valeur par défaut
