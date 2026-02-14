@@ -362,7 +362,7 @@ Nous avons plusieurs petits tableaux mémoire :
 tabHeuresDizaine   = "10"
 tabHeuresUnite     = "0011"
 tabMinutesDizaine  = "101"
-...
+```
 
 Et un grand tableau :
 
