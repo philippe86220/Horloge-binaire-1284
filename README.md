@@ -141,7 +141,9 @@ Programmateur	ATmega1284
 | SCK           | pin 8               |
 | RESET         | pin 9               |
 | VCC           | pin 10              |
+| AVCC          | pin 30              |
 | GND           | pin 11              |
+| GND           | pin 31              |
 +---------------+---------------------+
 ```
 ⚠️ Ces broches correspondent au PORT B du microcontrôleur :
