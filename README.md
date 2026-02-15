@@ -128,7 +128,7 @@ Sélectionner :
 ---
 
 🔌 **Câblage ISP**
-Connexion du programmateur :
+Connexion du programmateur AVRISP mkII :  
 Programmateur	ATmega1284
 ```
 +---------------+---------------------+
