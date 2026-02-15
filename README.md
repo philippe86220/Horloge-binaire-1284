@@ -119,6 +119,8 @@ https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
 
 ⚙️ **Configuration dans Arduino IDE**
 
+![cablage](/docs/IMG_2920.jpg)
+
 Sélectionner :
 
 - Type de carte : ATmega1284
@@ -137,7 +139,7 @@ car le microcontrôleur est programmé directement via l’interface ISP.
 
 🔌 **Câblage ISP**
 Connexion du programmateur AVRISP mkII :  
-Programmateur	ATmega1284
+Programmateur	→ ATmega1284
 ```
 +---------------+---------------------+
 | Programmateur | ATmega1284 (DIP40) |
@@ -146,11 +148,11 @@ Programmateur	ATmega1284
 | MISO          | pin 7               |
 | SCK           | pin 8               |
 | RESET         | pin 9               |
-| VCC           | pin 10              |
-| GND           | pin 11              |
+| VCC           | pin 10 & AVCC pin 30|
+| GND           | pin 11 & 31         |
 +---------------+---------------------+
 ```
-⚠️ Ces broches correspondent au PORT B du microcontrôleur :
+⚠️ Les broches SPI correspondent au PORT B du microcontrôleur :
 ```
 PB5 = MOSI
 PB6 = MISO
@@ -162,8 +164,6 @@ PB7 = SCK
 ---
 
 🔥 **Gravure de la séquence d’initialisation**
-
-![cablage](/docs/IMG_2920.jpg)
 
 Cliquer :
 ```
@@ -217,12 +217,13 @@ La chaîne binaire est la **source unique de vérité**.
 1️⃣ Acquisition du temps
 
 ```cpp
-uint8_t h = RTC.heure();
-uint8_t m = RTC.minute();
-uint8_t s = RTC.seconde();
+RTC.actualiser();
+RTC.heure();
+RTC.minute();
+RTC.seconde();
 ```
-- Le DS3231 est la source
-- `RTC.actualiser()` sert de validation / synchro
+- Le DS3231 est la référence temporelle.
+
 ---
 
 2️⃣ Séparation dizaines / unités
