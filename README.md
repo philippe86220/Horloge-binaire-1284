@@ -19,7 +19,7 @@ Ce projet a été développé en 2024 dans un objectif à la fois
 
 - Réaliser une horloge binaire autonome
 - Comprendre le lien **temps → binaire → LEDs**
-- Travailler sans `String`, uniquement avec des **C-strings**
+- Travailler sans `String`, uniquement avec des **`C-strings`**
 - Exploiter un microcontrôleur AVR “hors Arduino Uno”
 - Concevoir un circuit complet (alimentation, MCU, RTC, affichage)
 
