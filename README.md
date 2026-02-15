@@ -34,7 +34,7 @@ L’horloge affiche :
 
 Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED organisées par poids (1, 2, 4, 8).
 
-> Une documentation visuelle (photos et schéma) est fournie dans le dossier `docs/`.
+![rendu](/docs/IMG-2.jpg)
 
 ---
 
