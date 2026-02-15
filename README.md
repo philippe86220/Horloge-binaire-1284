@@ -47,7 +47,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 - LEDs rouges et vertes
   - par exemple https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm
   - https://www.gotronic.fr/art-led-5-mm-verte-l53lgd-2093.htm
-- Resistances 470 ohm (selon LED et luminosite voulue)
+- Resistances 470 Ω (selon LED et luminosite voulue)
 - Diode 1N4007
 - Condensateurs de filtrage
 - Connecteur jack DC
@@ -61,7 +61,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 
 ## 🔌 Alimentation et horloge
 
-- **Alimentation** : tension de 9 V en courant continu pouvant fournir jusqu’à 0,5 A
+- **Alimentation** : adaptateur 9 V DC, capable de fournir jusqu’a 0,5 A (ou plus).
 - **Tension** : 5 V régulée
 - **Fréquence MCU** : oscillateur interne
 - **Quartz externe** : ❌ non utilisé
