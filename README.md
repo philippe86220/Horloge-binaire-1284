@@ -355,7 +355,7 @@ Donc :
 
 ---
 
-📊 **Tableau récapitulatif (très rassurant pour le débutant)**
+📊 **Tableau récapitulatif**
 
 | Groupe            | Valeur max | Bits nécessaires | Valeur de `w` |
 | ----------------- | ---------- | ---------------- | ------------- |
