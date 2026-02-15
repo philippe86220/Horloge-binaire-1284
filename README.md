@@ -246,7 +246,7 @@ Exemples :
 
 🧠 **Principe fondamental (à comprendre en premier)**
 
-> **Un microcontrôleur travaille toujours sur 8 bits,**
+> **L’ATmega1284 est un microcontrôleur 8 bits,**
 > mais **nous n’avons pas toujours besoin des 8 bits** pour afficher un chiffre.
 
 Exemples :
