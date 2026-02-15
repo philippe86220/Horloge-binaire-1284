@@ -523,7 +523,7 @@ tab2++;
 ```
 👉 Traduction simple :  
 - `*tab2` = “le caractère contenu dans la case pointée par tab2”
-- `tab2++` = “avance vers la case suivante”
+- `tab2++` = “déplace le pointeur pour qu’il pointe vers le caractère suivant”
 - `tab1[i++]` = “écrit dans la case i de tab1, puis avance i”
 
 Donc :  
