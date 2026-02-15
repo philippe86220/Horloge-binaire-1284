@@ -125,7 +125,9 @@ Sélectionner :
 - Bootloader : No bootloader
 - Programmer : AVRISP mkII
 
-👉 Ces paramètres configurent automatiquement les fuses.
+👉 Ces paramètres configurent automatiquement les fuses.  
+L’utilisation d’un bootloader n’est pas nécessaire dans ce projet,   
+car le microcontrôleur est programmé directement via l’interface ISP.
 
 ---
 
