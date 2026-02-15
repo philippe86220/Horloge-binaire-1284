@@ -201,7 +201,8 @@ La chaîne binaire est la **source unique de vérité**.
 ## 📚 Pour aller plus loin
 
 - Ajouter un réglage manuel de l’heure   
-  (le module RTC est très performant donc ce n'est pas indispensable de plus il est amovible et réglable via l'ide Arduino)
+  (le module RTC est très performant donc ce n'est pas indispensable de plus  
+  vous devez le rendre amovible et donc réglable via l'ide Arduino)
 - Ajouter un affichage date
 - Porter le projet en 3,3 V
 
