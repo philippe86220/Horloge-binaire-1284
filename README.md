@@ -79,8 +79,9 @@ Le schéma électronique complet est fourni :
 - Régulation et filtrage d’alimentation
 
 👉 Voir le fichier dans `docs/` :
-- `Schematic_Horloge-Binaire-ATmega1284_2024-05-30.pdf`
-![Schematic](/docs/IMG_2888.jpg)
+
+![Schematic](/docs/Schematic_Horloge-Binaire-ATmega1284.png)
+
 ---
 
 ## 💾 Flash et configuration de l’ATmega1284
