@@ -65,7 +65,9 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 - **Quartz externe** : ❌ non utilisé
 - **Fréquence** : 8 MHz interne
 
-Le choix d’un RTC **DS3231** garantit une excellente précision, indépendamment de l’horloge interne du microcontrôleur.
+Le choix d’un RTC **DS3231** garantit une excellente précision, indépendamment de l’horloge interne du microcontrôleur.  
+De prèférence évitez le module de type aliexpress, par exemple :   
+https://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
 
 ---
 
