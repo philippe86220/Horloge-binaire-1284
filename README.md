@@ -165,6 +165,7 @@ Cette étape :
 - configure les fuses
 - sélectionne l’horloge interne 8 MHz
 - désactive le bootloader
+  
 👉 aucune autre manipulation n’est nécessaire.
 ---
 
