@@ -154,6 +154,9 @@ PB7 = SCK
 ---
 
 🔥 **Gravure de la séquence d’initialisation**
+
+![cablage](/docs/IMG_2920.jpg)
+
 Cliquer :
 ```
 Outils → Graver la séquence d'initialisation
