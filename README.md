@@ -148,6 +148,7 @@ PB5 = MOSI
 PB6 = MISO
 PB7 = SCK
 ```
+![standard](/docs/standard.png)
 ![cablage](/docs/IMG_2921.jpg)
 
 ---
