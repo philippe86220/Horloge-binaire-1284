@@ -83,15 +83,15 @@ Le schéma électronique complet est fourni :
 
 ---
 
-## 💾 Flash et configuration de l’ATmega1284P
+## 💾 Flash et configuration de l’ATmega1284
 
 ### Core Arduino utilisé
 
-Ce projet utilise **MightyCore**, développé par MCUdude :
+Ce projet utilise **MightyCore 3.0.3**, développé par MCUdude et l'**IDE Arduino 1.8.19** :
 
 https://github.com/MCUdude/MightyCore
 
-MightyCore permet d’utiliser l’ATmega1284P directement depuis l’IDE Arduino.
+MightyCore permet d’utiliser l’ATmega1284 directement depuis l’IDE Arduino.
 
 ---
 
@@ -100,7 +100,7 @@ MightyCore permet d’utiliser l’ATmega1284P directement depuis l’IDE Arduin
 1. Ouvrir **Fichier → Préférences**
 2. Ajouter l’URL suivante :
 
-https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
+https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
 
 3. Ouvrir **Outils → Type de carte → Gestionnaire de cartes**
 4. Rechercher **MightyCore**
@@ -108,18 +108,56 @@ https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
 
 ---
 
-### Configuration recommandée dans l’IDE Arduino
+⚙️ **Configuration dans Arduino IDE**
 
-- Board : ATmega1284 (MightyCore)
-- Variant : ATmega1284
+Sélectionner :
+
+- Type de carte : ATmega1284
 - Clock : Internal 8 MHz
-- Pinout : Standard pinout
-- BOD : valeur par défaut
-- Bootloader : optionnel
+- BOD : 2.7 V
+- Variant : 1284
+- Pinout : Standard
+- Bootloader : No bootloader
+- Programmer : AVRISP mkII
 
-> Les fuse bits peuvent être configurés automatiquement via  
-> **Outils → Graver la séquence d’initialisation**
+👉 Ces paramètres configurent automatiquement les fuses.
 
+---
+
+🔌 **Câblage ISP**
+Connexion du programmateur :
+Programmateur	ATmega1284
+```
++---------------+---------------------+
+| Programmateur | ATmega1284 (DIP40) |
++---------------+---------------------+
+| MOSI          | pin 6               |
+| MISO          | pin 7               |
+| SCK           | pin 8               |
+| RESET         | pin 9               |
+| VCC           | pin 10              |
+| GND           | pin 11              |
++---------------+---------------------+
+```
+⚠️ Ces broches correspondent au PORT B du microcontrôleur :
+```
+PB5 = MOSI
+PB6 = MISO
+PB7 = SCK
+```
+
+---
+
+🔥 **Gravure de la séquence d’initialisation**
+Cliquer :
+```
+Outils → Graver la séquence d'initialisation
+```
+Cette étape :
+- configure les fuses
+- sélectionne l’horloge interne 8 MHz
+- désactive le bootloader
+👉 aucune autre manipulation n’est nécessaire.
 ---
 
 ## 🧠 Principe de fonctionnement du code
