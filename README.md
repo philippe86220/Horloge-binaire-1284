@@ -41,7 +41,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 ## 🧰 Matériel utilisé (BOM)
 
 ### Composants principaux
-- ATmega1284P-PU (DIP40)
+- ATmega1284 (DIP40)
 - Module RTC DS3231 (Adafruit ou équivalent)
 - Régulateur de tension **L7805ABP (TO-220)**
 - LEDs rouges et vertes
