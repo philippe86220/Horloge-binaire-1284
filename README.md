@@ -3,7 +3,7 @@
 **horloge binaire HH:MM:SS :**
 
 Horloge binaire basée sur un
-microcontrôleur **ATmega1284P** et un module RTC **DS3231**.  
+microcontrôleur **ATmega1284** et un module RTC **DS3231**.  
 L’heure est affichée sous forme binaire (HH:MM:SS) à l’aide de LED.
 
 Ce projet a été développé en 2024 dans un objectif à la fois
