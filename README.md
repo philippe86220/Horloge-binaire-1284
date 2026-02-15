@@ -43,9 +43,9 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 ### Composants principaux
 - ATmega1284 (DIP40)
 - Module RTC DS3231 (Adafruit ou équivalent)
-  par exemple https://www.gotronic.fr/account/orders/000605204
 - Régulateur de tension **L7805ABP (TO-220)**
-- LEDs rouges et vertes 
+- LEDs rouges et vertes
+  par exemple https://www.gotronic.fr/account/orders/000605204  
 - Resistances 470 ohm (selon LED et luminosite voulue)
 - Diode 1N4007
 - Condensateurs de filtrage
