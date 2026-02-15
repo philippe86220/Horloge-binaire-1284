@@ -75,7 +75,7 @@ https://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
 
 Le schéma électronique complet est fourni :
 
-- ATmega1284P autonome
+- ATmega1284 autonome
 - RTC DS3231 via I2C
 - Groupes de LED pour heures / minutes / secondes
 - Régulation et filtrage d’alimentation
