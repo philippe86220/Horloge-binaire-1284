@@ -269,15 +269,15 @@ Exemples :
 🔍 **Signature de la fonction**
 
 ```cpp
-binaire(valeur, w, buffer);
+binaire(valeur, w_from_bits(3), buffer);
 ```
 - `valeur` : le nombre à convertir (ex: 2, 7, 9)
-- `w` : indique **combien de bits on ignore au début**
+- `w_from_bits(3)` : indique **combien de bits on ignore au début**
 - `buffer` : la chaîne `'0'/'1'` résultat
 
 ⚠️ **Point clé pour le débutant**
-👉 `w` n’est pas le nombre de bits,
-👉 c’est le nombre de positions ignorées avant de commencer à écrire.
+👉 la fonction `w_from_bits(3)` ne retourne pas le nombre de bits,
+👉 elle retourne le nombre de positions ignorées avant de commencer à écrire.
 
 ---
 
@@ -300,7 +300,7 @@ Autrement dit :
 
 Imagine une règle de 8 cases (les 8 bits) :
 
-```css
+```
 [ b7 ][ b6 ][ b5 ][ b4 ][ b3 ][ b2 ][ b1 ][ b0 ]
 
 ```
