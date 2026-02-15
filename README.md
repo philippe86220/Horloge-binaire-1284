@@ -81,6 +81,8 @@ Le schéma électronique complet est fourni :
 👉 Voir le fichier dans `docs/` :
 
 ![Schematic](/docs/Schematic_Horloge-Binaire-ATmega1284.png)
+![connexions](/docs/Capture_d’écran_connexions.png)
+
 
 ---
 
