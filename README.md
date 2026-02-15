@@ -80,7 +80,7 @@ Le schéma électronique complet est fourni :
 
 👉 Voir le fichier dans `docs/` :
 - `Schematic_Horloge-Binaire-ATmega1284_2024-05-30.pdf`
-
+![Schematic](/docs/IMG_2888.jpg)
 ---
 
 ## 💾 Flash et configuration de l’ATmega1284
