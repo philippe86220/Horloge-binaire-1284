@@ -167,6 +167,7 @@ Cette étape :
 - désactive le bootloader
   
 👉 aucune autre manipulation n’est nécessaire.
+
 ---
 
 ## 🧠 Principe de fonctionnement du code
