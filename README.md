@@ -593,14 +593,13 @@ Projet conçu et réalisé par **Philippe86220**
 
 ---
 
-🤝 Remerciements
-Ce projet a bénéficié d’échanges pédagogiques avec ChatGPT (OpenAI),   
-utilisé comme outil d’aide à la compréhension du C embarqué et à la rédaction de la documentation.
+## 🤝 Remerciements
 
----
+Ce projet a bénéficié d’échanges pédagogiques avec ChatGPT (OpenAI), utilisé comme assistant technique pour la réflexion algorithmique, 
+l’optimisation du code et la rédaction de la documentation.
 
 ## 📄 Licence
 
-MIT 
+MIT
 
 
