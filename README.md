@@ -521,10 +521,10 @@ Cette instruction compacte réalise plusieurs actions en une seule opération :
 
 ---
 
-🧠 Important : gestion du zéro terminal
-Lorsque `*p == '\0'` :
-👉 la boucle s’arrête automatiquement
-👉 on passe à la chaîne suivante.
+🧠 Important : gestion du zéro terminal  
+Lorsque `*p == '\0'` :  
+👉 la boucle s’arrête automatiquement  
+👉 on passe à la chaîne suivante.  
 
 ---
 
