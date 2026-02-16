@@ -598,6 +598,8 @@ Projet conçu et réalisé par **Philippe86220**
 Ce projet a bénéficié d’échanges pédagogiques avec ChatGPT (OpenAI), utilisé comme assistant technique pour la réflexion algorithmique, 
 l’optimisation du code et la rédaction de la documentation.
 
+---
+
 ## 📄 Licence
 
 MIT
