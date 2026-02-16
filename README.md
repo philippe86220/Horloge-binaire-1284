@@ -46,7 +46,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 - ATmega1284 (DIP40)
 - Support de circuit intégré DIP-40 (socket pour ATmega1284, recommandé pour faciliter le remplacement éventuel)
 - Module RTC DS3231 (Adafruit ou équivalent)
--  Barrette femelle sécable 2,54 mm (pour enficher le module RTC DS3231)
+-  Barrette femelle sécable 2,54 mm (pour enficher le module RTC DS3231 et l'enlever pour mise à l'heure)
 - Régulateur de tension **L7805ABP (TO-220)**
 - LEDs rouges et vertes
   - par exemple https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm
