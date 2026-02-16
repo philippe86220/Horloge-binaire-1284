@@ -509,11 +509,15 @@ while (*p)
 ```cpp
 dst[i++] = *p++;
 ```
-Cette instruction signifie :  
-- `*p` : lire le caractère pointé
-- `dst[i]` : l’écrire dans le tableau final
-- `p++` : avancer dans la chaîne source
-- `i++` : avancer dans la chaîne destination
+Cette instruction compacte réalise plusieurs actions en une seule opération :
+
+- `*p` : lit le caractère pointé dans la chaîne source
+-  ce caractère est immédiatement copié dans `dst[i]`
+- `p++` : avance le pointeur vers le caractère suivant
+- `i++` : avance l’indice dans la chaîne destination
+
+👉 Autrement dit :  
+> On copie un caractère, puis on avance simultanément dans la chaîne source et dans la chaîne destination.
 
 ---
 
