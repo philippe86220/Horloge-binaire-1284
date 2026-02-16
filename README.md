@@ -178,7 +178,7 @@ Cette étape :
 
 ---
 
-**Téléversement du fichier `.ino`**
+⚙️ **Téléversement du fichier `.ino`**
 
 ![televersement](/docs/IMG_2926.jpg)
 
