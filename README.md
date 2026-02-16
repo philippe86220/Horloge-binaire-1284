@@ -539,7 +539,7 @@ Cela garantit :
 
 - qu’il reste toujours une place pour '\0'
 - qu’aucune écriture hors buffer n’est possible.
-- 
+
 Si la taille maximale est atteinte :
 
 👉 la fonction termine immédiatement la chaîne et sort.
