@@ -36,6 +36,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 
 ![connexions](/docs/connexions.jpg)
 ![rendu](/docs/IMG_2888.jpg)
+![renduVerso](/docs/IMG_2891.jpg)
 
 
 ---
