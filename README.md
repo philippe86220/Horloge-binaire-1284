@@ -411,7 +411,10 @@ HHd | HHu | MMd | MMu | SSd | SSu
 via la fonction :
 
 ```cpp
-void concatener(...)
+void concatener(char *dst, uint8_t dstSize,
+                       const char *a, const char *b, const char *c,
+                       const char *d, const char *e, const char *f)
+{
 ```
 🎯 Objectif
 La fonction `concatener()` construit **une chaîne binaire globale unique** à partir de plusieurs petites  
