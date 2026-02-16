@@ -479,7 +479,7 @@ Cela permet de :
 - parcourir toutes les sources avec une seule boucle,
 - éviter la répétition de code,
 - rendre la fonction générique.
-- 
+  
 ---
 
 🔁 **Étape 1 — Parcours des chaînes source**
