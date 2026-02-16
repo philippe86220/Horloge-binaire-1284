@@ -379,6 +379,25 @@ Donc :
 
 ---
 
+🧮 **fonction d'aide au calcul de w : `uint8_t w_from_bits(uint8_t bits)`**
+```cpp
+uint8_t w_from_bits(uint8_t bits) {
+  return (uint8_t)(7 - bits);
+}
+```
+Pour plus de lisibilité, on ne manipule pas directement w.  
+
+On indique simplement le nombre de bits nécessaires :
+
+```cpp
+binaire(valeur, w_from_bits(3), buffer);
+```
+Formule interne :
+```cpp
+w = 7 - nombre_de_bits
+```
+--- 
+
 4️⃣ Construction d’une chaîne binaire globale  
 
 
