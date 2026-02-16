@@ -445,7 +445,7 @@ On transmet donc :
 - `a..f` : pointeurs vers 6 C-strings sources
 
 ⚠️ En langage C :
-> Le nom d’un tableau correspond automatiquement à l’adresse de son premier caractère.
+> Quand on passe un tableau à une fonction, son nom est automatiquement converti en pointeur vers son premier élément (équivalent à &tab[0]).
 
 Ainsi :
 ```cpp
