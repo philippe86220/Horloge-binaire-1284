@@ -398,7 +398,7 @@ w = 7 - nombre_de_bits
 ```
 --- 
 
-4️⃣ Construction d’une chaîne binaire globale  
+4️⃣ Fonction concatener() — explication pédagogique 
 
 
 ```cpp
@@ -413,153 +413,143 @@ via la fonction :
 ```cpp
 void concatener(...)
 ```
-- Pas de strcat
-- Pas de buffer temporaire
-- Une seule chaîne finale
+🎯 Objectif
+La fonction `concatener()` construit **une chaîne binaire globale unique** à partir de plusieurs petites  
+chaînes contenant les bits des heures, minutes et secondes.  
 
-🎯 **Idée de base**  
-
-En langage C, une chaîne de caractères (`char[]`) n’est rien d’autre qu’une **suite de cases mémoire   
-contiguës,** chacune contenant un caractère.
-Par exemple, la chaîne `"10"` est stockée en mémoire comme ceci :
-
-```
-Adresse →   0     1     2
-Contenu →  '1'   '0'   '\0'
-```
-Le `'\0'` (zéro terminal) indique la fin de la chaîne.
+Elle remplace volontairement l’usage des fonctions classiques comme `strcat()` afin de :  
+- garder un contrôle total sur la mémoire,
+- éviter tout dépassement de buffer,
+- rester pédagogique.
 
 ---
 
-🧩 **Notre situation dans le programme**
+🧩 **Les paramètres transmis**
 
-Nous avons plusieurs petits tableaux mémoire :  
-
-```
-tabHeuresDizaine   = "10"
-tabHeuresUnite     = "0011"
-tabMinutesDizaine  = "101"
-```
-
-Et un grand tableau :
-
-```
-tabConcatenation = [cases mémoire vides]
-```
-
-Le rôle de `concatener()` est **de remplir ce grand tableau en copiant les cases des autres tableaux à la suite.**  
-
----
-
-🔎 **Étape 1 — Trouver la fin du tableau principal**   
-Au début, tab1 contient déjà le premier morceau.
-
-Exemple :
-```
-tab1 (tabConcatenation)
-
-Adresse →   0     1     2     3     4 ...
-Contenu →  '1'   '0'   '\0'  ?     ?
-```
-
-La boucle : 
+L’appel de la fonction est :  
 
 ```cpp
-while (tab1[i]) i++;
+concatener(tabConcatenation, sizeof(tabConcatenation),
+           tabHeuresDizaine, tabHeuresUnite,
+           tabMinutesDizaine, tabMinutesUnite,
+           tabSecondesDizaine, tabSecondesUnite);
 ```
 
-avance jusqu’au `'\0'`.
+On transmet donc :
 
-👉 À la fin :
+`dst` : le tableau final qui recevra la chaîne complète
+`dstSize` : sa taille maximale
+puis six adresses de chaînes de caractères à concaténer.
+⚠️ En langage C :
+> Le nom d’un tableau correspond automatiquement à l’adresse de son premier caractère.
 
-- i pointe exactement **la première case libre.**
+Ainsi :
+```cpp
+tabHeuresDizaine
+```
+est équivalent à :
+
+```cpp
+&tabHeuresDizaine[0]
+```
+---
+
+🧠 **Le principe clé : un tableau de pointeurs**
+
+Au lieu de copier chaque tableau séparément, la fonction crée un tableau de pointeurs :  
+
+```cpp
+const char *srcs[6] = { a, b, c, d, e, f };
+```
+
+Ce tableau contient simplement :  
+
+👉 les adresses des six chaînes à copier.  
+
+Cela permet de :  
+
+- parcourir toutes les sources avec une seule boucle,
+- éviter la répétition de code,
+- rendre la fonction générique.
+- 
+---
+
+🔁 **Étape 1 — Parcours des chaînes source**
+Une boucle for parcourt les six pointeurs :
+
+```
+for (uint8_t s = 0; s < 6; s++)
+```
+
+À chaque itération :
+
+```cpp
+const char *p = srcs[s];
+```
+
+Le pointeur p reçoit l’adresse du premier caractère de la chaîne courante.
 
 ---
 
-🔎 **Étape 2 — Copier un autre tableau**
-
-Prenons `tab2 = "0011"`.
-
-En mémoire :
-```
-Adresse →   0     1     2     3     4
-Contenu →  '0'   '0'   '1'   '1'   '\0'
-
-```
-
-La boucle :
+🔁 **Étape 2 — Copie caractère par caractère**
+Une boucle interne copie les caractères tant que le zéro terminal n’est pas atteint :
 
 ```cpp
-while (*tab2) {
-  tab1[i++] = *tab2;
-  tab2++;
-}
+while (*p)
 ```
-
-fait exactement ceci :  
-
-**Copie case par case**
+À chaque tour :
+```cpp
+dst[i++] = *p++;
 ```
-tab1 avant :
-[ '1' ][ '0' ][ '\0' ][ ? ][ ? ][ ? ]
-
-copie '0' →
-[ '1' ][ '0' ][ '0' ][ ? ][ ? ]
-
-copie '0' →
-[ '1' ][ '0' ][ '0' ][ '0' ][ ? ]
-
-copie '1' →
-[ '1' ][ '0' ][ '0' ][ '0' ][ '1' ]
-
-copie '1' →
-[ '1' ][ '0' ][ '0' ][ '0' ][ '1' ][ '1' ]
-```
-Puis la boucle s’arrête quand elle rencontre le `'\0'`.
-
-👉 On passe ensuite au tableau suivant (`tab3`, `tab4`, etc.).
+Cette instruction signifie :  
+- `*p` : lire le caractère pointé
+- `dst[i]` : l’écrire dans le tableau final
+- `p++` : avancer dans la chaîne source
+- `i++` : avancer dans la chaîne destination
 
 ---
 
-🔎 **Étape finale — Marquer la fin de la chaîne**  
-
-Après toutes les copies :
-```cpp
-tab1[i] = '\0';
-```
-
-On place le marqueur de fin :  
-
-```css
-[ '1' ][ '0' ][ '0' ][ '0' ][ '1' ][ '1' ][ '\0' ]
-```
-
-Maintenant, `tab1` est une chaîne valide.
+🧠 Important : gestion du zéro terminal
+Lorsque `*p == '\0'` :
+👉 la boucle s’arrête automatiquement
+👉 on passe à la chaîne suivante.
 
 ---
 
-🧠 **Que signifient exactement les deux lignes clés ?**  
+🔒 Protection contre le dépassement mémoire
+Avant chaque écriture, la fonction vérifie :
 
-Ces deux lignes sont le cœur de la fonction :
 ```cpp
-tab1[i++] = *tab2;
-tab2++;
+if (i + 1 >= dstSize)
 ```
-👉 Traduction simple :  
-- `*tab2` = “le caractère contenu dans la case pointée par tab2”
-- `tab2++` = “déplace le pointeur pour qu’il pointe vers le caractère suivant”
-- `tab1[i++]` = “écrit dans la case i de tab1, puis avance i”
 
-Donc :  
+Cela garantit :
 
-> On copie le contenu d’une case mémoire dans une autre, puis on avance d’une case dans les deux 
-> tableaux.
+- qu’il reste toujours une place pour '\0'
+- qu’aucune écriture hors buffer n’est possible.
+- 
+Si la taille maximale est atteinte :
+
+👉 la fonction termine immédiatement la chaîne et sort.
+
+---
+
+🏁 Étape finale — Fin de la chaîne globale
+Une fois toutes les copies terminées :
+
+```cpp
+dst[i] = '\0';
+```
+On ajoute le marqueur de fin de chaîne.  
+
+Le tableau dst devient alors une C-string valide contenant tous les bits.
 
 ---
 
 🎯 **Résumé en une phrase **
-> La fonction concatener() copie simplement le contenu de plusieurs tableaux de caractères 
-> dans un grand tableau, case mémoire par case mémoire, jusqu’à construire une seule chaîne continue.
+> La fonction concatener() copie successivement plusieurs chaînes binaires dans un tableau unique,  
+> caractère par caractère, en utilisant un tableau de pointeurs pour parcourir automatiquement toutes les   
+> sources, tout en garantissant l’absence de dépassement mémoire.
 
 ---
 
