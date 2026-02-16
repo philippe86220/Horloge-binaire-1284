@@ -178,6 +178,10 @@ Cette étape :
 
 ---
 
+**Téléversement du fichier `.ino`**
+
+![televersement](/docs/IMG_2926.jpg)
+
 ## 🧠 Principe de fonctionnement du code
 
 Chaque seconde, le programme effectue la séquence suivante :
