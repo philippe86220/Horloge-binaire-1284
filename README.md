@@ -276,8 +276,8 @@ binaire(valeur, w, buffer);
 - `buffer` : la chaîne `'0'/'1'` résultat
 
 ⚠️ **Point clé pour le débutant**
-👉 la variable `w` ne retourne pas le nombre de bits,
-👉 elle retourne le nombre de positions ignorées avant de commencer à écrire.
+👉 w n’est pas le nombre de bits à écrire : 
+👉 c’est l’indice à partir duquel on commence à écrire, donc le nombre de positions ignorées au début.
 
 ---
 
@@ -440,9 +440,10 @@ concatener(tabConcatenation, sizeof(tabConcatenation),
 
 On transmet donc :
 
-`dst` : le tableau final qui recevra la chaîne complète
-`dstSize` : sa taille maximale
-puis six adresses de chaînes de caractères à concaténer.
+- `dst` : le tableau final qui recevra la chaîne complète
+- `dstSize` : sa taille maximale
+- `a..f` : pointeurs vers 6 C-strings sources
+
 ⚠️ En langage C :
 > Le nom d’un tableau correspond automatiquement à l’adresse de son premier caractère.
 
@@ -575,10 +576,13 @@ Avec **trois plages :**
 6️⃣ Gestion temporelle
 
 ```cpp
-if (millis() - tempsPrecedent > 1000)
+if (millis() - tempsPrecedent >= 1000UL) {
+  ...
+  tempsPrecedent += 1000;
+}
 ```
 
-- Mise à jour toutes les secondes
+- += 1000 évite la dérive (cadence stable à 1 Hz)
 - Pas de delay()
 
 
@@ -587,6 +591,10 @@ if (millis() - tempsPrecedent > 1000)
 Projet conçu et réalisé par **Philippe86220**  
 2024 — usage personnel et pédagogique
 
+---
+🤝 Remerciements
+Ce projet a bénéficié d’échanges pédagogiques avec ChatGPT (OpenAI),   
+utilisé comme outil d’aide à la compréhension du C embarqué et à la rédaction de la documentation.
 ---
 
 ## 📄 Licence
