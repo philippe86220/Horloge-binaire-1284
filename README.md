@@ -521,16 +521,18 @@ Elle remplace volontairement l’usage des fonctions classiques comme `strcat()`
 L’appel de la fonction est :  
 
 ```cpp
-void concatener(char *dst, uint8_t dstSize,
-                const char *a, const char *b, const char *c,
-                const char *d, const char *e, const char *f)
+concatener(tabConcatenation, sizeof(tabConcatenation),
+           tabHeuresDizaine, tabHeuresUnite,
+           tabMinutesDizaine, tabMinutesUnite,
+           tabSecondesDizaine, tabSecondesUnite);
+
 ```
 
 On transmet donc :
 
-- `dst` : le tableau final qui recevra la chaîne complète
-- `dstSize` : sa taille maximale
-- `a..f` : pointeurs vers 6 C-strings sources
+- `dst` : le tableau final qui recevra la chaîne complète → `tabConcatenation`
+- `dstSize` : sa taille maximale → `sizeof(tabConcatenation`
+- `a..f` : pointeurs vers 6 C-strings sources → `tabHeuresDizaine..tabSecondesUnite`
 
 ⚠️ En langage C :
 > Quand on passe un tableau à une fonction, son nom est automatiquement converti en pointeur vers son premier élément (équivalent à &tab[0]).
