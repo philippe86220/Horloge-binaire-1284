@@ -77,8 +77,8 @@ il se contente de traduire l’heure en états de LED.
 
 ---
 
-Horloge binaire basée sur un
-microcontrôleur **ATmega1284** et un module RTC **DS3231** amovible pour les rares mises à l'heure (dérive très faible).  
+L'horloge binaire est basée sur un  
+microcontrôleur **ATmega1284** et un module RTC **DS3231** amovible pour les rares mises à l'heure (dérive très faible).    
 L’heure est affichée sous forme binaire (HH:MM:SS) à l’aide de LED.
 
 Ce projet a été développé en 2024 dans un objectif à la fois
