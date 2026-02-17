@@ -643,7 +643,7 @@ dst[i] = '\0';
 ```
 On ajoute le marqueur de fin de chaîne.  
 
-Le tableau dst devient alors une C-string valide contenant tous les bits.
+Le tableau `dst` devient alors une C-string valide contenant tous les bits.
 
 ---
 
@@ -680,7 +680,7 @@ if (millis() - tempsPrecedent >= 1000UL) {
 ```
 > Le projet utilise un ordonnancement périodique basé sur tempsPrecedent += intervalle, 
 > garantissant une cadence temporelle stable indépendante du temps d’exécution du code.
-> 
+
 - += 1000 évite la dérive (cadence stable à 1 Hz)
 - Pas de delay()
 
