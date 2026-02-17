@@ -136,7 +136,7 @@ Sélectionner :
 
 👉 Ces paramètres configurent automatiquement les fuses.  
 L’utilisation d’un bootloader n’est pas nécessaire dans ce projet,   
-car le microcontrôleur est programmé directement via l’interface ISP.
+car le microcontrôleur est programmé directement via l’interface ISP de type **AVRISP mkII**.
 
 ---
 
