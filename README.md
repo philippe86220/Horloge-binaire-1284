@@ -15,8 +15,8 @@ Chaque groupe de LED correspond à un chiffre décimal de l’heure :
 - dizaines de minutes
 - unités de minutes
 - dizaines de secondes
-- unités de secondes
-- 
+- unités de secondes   
+  
 Chaque LED représente un poids binaire :
 
 ```
