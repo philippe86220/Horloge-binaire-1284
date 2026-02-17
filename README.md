@@ -556,7 +556,7 @@ const char *srcs[6] = { a, b, c, d, e, f };
 
 Ce tableau contient simplement :  
 
-👉 les adresses des six chaînes à copier.  
+👉 les adresses des six chaînes à concaténer.  
 
 Cela permet de :  
 
