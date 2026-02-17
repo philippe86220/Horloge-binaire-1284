@@ -1,6 +1,12 @@
 # Horloge binaire – ATmega1284 + DS3231
 
-**horloge binaire HH:MM:SS :**
+---
+
+## ⭐ Présentation rapide
+
+Horloge binaire HH:MM:SS autonome basée sur ATmega1284
+et RTC DS3231, conçue dans un objectif pédagogique
+et électronique.
 
 ---
 
@@ -60,7 +66,7 @@ devient :
 4  → 100
 2  → 0010
 ```
-Chaque groupe de LED s’allume selon ces bits et si ils sont à `1`.
+Chaque groupe de LED s’allume selon ces bits et si ils sont à 1.
 
 ---
 
@@ -77,10 +83,9 @@ il se contente de traduire l’heure en états de LED.
 
 ---
 
-Cette horloge binaire est basée sur un  
-microcontrôleur **ATmega1284** et un module RTC **DS3231**   
-amovible pour les rares mises à l'heure (dérive très faible).    
-L’heure est affichée sous forme binaire (HH:MM:SS) à l’aide de LED.
+Cette horloge binaire repose sur un microcontrôleur ATmega1284
+et un module RTC DS3231 amovible, permettant des mises à l’heure
+ponctuelles tout en conservant une excellente précision.
 
 Ce projet a été développé en 2024 dans un objectif à la fois
 **fonctionnel**, **pédagogique** et **électronique**, en privilégiant :
