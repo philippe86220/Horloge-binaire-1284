@@ -87,7 +87,7 @@ Le schéma électronique complet est fourni :
 - Groupes de LED pour heures / minutes / secondes
 - Régulation et filtrage d’alimentation
 
-👉 Le Schéma est valable aussi bien pour un 1284 ou un 1284P :
+👉 Le Schéma est valable aussi bien pour un 1284 que pour un 1284P :
 
 ![Schematic](/docs/Schematic_Horloge-Binaire-ATmega1284.png)
 
