@@ -2,6 +2,80 @@
 
 **horloge binaire HH:MM:SS :**
 
+---
+
+## ⏱️ Principe d’une horloge binaire
+Une horloge binaire n’affiche pas l’heure avec des chiffres classiques, mais à l’aide de **LED représentant  
+les bits binaires des nombres**.
+
+Chaque groupe de LED correspond à un chiffre décimal de l’heure :
+
+- dizaines d’heures
+- unités d’heures
+- dizaines de minutes
+- unités de minutes
+- dizaines de secondes
+- unités de secondes
+- 
+Chaque LED représente un poids binaire :
+
+```
+1   2   4   8
+```
+
+Une LED allumée signifie que son poids est présent dans la valeur du chiffre.
+
+---
+
+## 🔎 Exemple de lecture
+
+```
+4 + 1 = 5
+```
+Le chiffre affiché est donc 5.
+
+---
+
+## 🧠 Principe fondamental
+
+Une horloge binaire ne montre pas directement l’heure :  
+
+👉 elle montre la décomposition binaire de chaque chiffre décimal.  
+
+Par exemple :  
+Si les LED correspondant aux poids 1 et 4 sont allumées :  
+
+```
+Heure : 19:37:42
+```
+
+devient :  
+
+```
+1  → 01
+9  → 1001
+3  → 011
+7  → 0111
+4  → 100
+2  → 0010
+```
+Chaque groupe de LED s’allume selon ces bits.
+
+---
+
+## 🎯 Rôle du programme
+Le microcontrôleur réalise en permanence la séquence suivante :  
+
+1. Lire l’heure du module RTC
+2. Séparer chaque chiffre décimal
+3. Convertir chaque chiffre en binaire
+4. Allumer ou éteindre les LED correspondantes
+   
+👉 Le programme ne “calcule pas l’heure” :  
+il se contente de traduire l’heure en états de LED.
+
+---
+
 Horloge binaire basée sur un
 microcontrôleur **ATmega1284** et un module RTC **DS3231** amovible pour les rares mises à l'heure (dérive très faible).  
 L’heure est affichée sous forme binaire (HH:MM:SS) à l’aide de LED.
@@ -269,7 +343,7 @@ Or un chiffre décimal n’a pas toujours besoin de 8 bits pour être représent
 - les dizaines d’heures ne vont que de **0 à 2**
 - elles peuvent donc être codées sur seulement **2 bits**
 - afficher les 8 bits complets serait inutile car pour les dizaines d’heures  
-  il ne faut que **2 bits** → soit **2 led**
+  il ne faut que **2 bits** → soit **2 LED**
   
 👉 Le rôle de la fonction `binaire()` est donc de :  
 
