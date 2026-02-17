@@ -531,7 +531,7 @@ concatener(tabConcatenation, sizeof(tabConcatenation),
 On transmet donc :
 
 - `dst` : le tableau final qui recevra la chaîne complète → `tabConcatenation`
-- `dstSize` : sa taille maximale → `sizeof(tabConcatenation`
+- `dstSize` : sa taille maximale → `sizeof(tabConcatenation)`
 - `a..f` : pointeurs vers 6 C-strings sources → `tabHeuresDizaine..tabSecondesUnite`
 
 ⚠️ En langage C :
