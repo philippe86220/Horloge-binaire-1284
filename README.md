@@ -504,8 +504,9 @@ void concatener(char *dst, uint8_t dstSize,
                        const char *d, const char *e, const char *f)
 {
 ```
-🎯 Objectif
-La fonction `concatener()` construit **une chaîne binaire globale unique** à partir de plusieurs petites  
+🎯 Objectif :  
+
+La fonction `concatener()` construit **une chaîne binaire globale unique** à partir de plusieurs petites    
 chaînes contenant les bits des heures, minutes et secondes.  
 
 Elle remplace volontairement l’usage des fonctions classiques comme `strcat()` afin de :  
