@@ -584,7 +584,7 @@ Le pointeur p reçoit l’adresse du premier caractère de la chaîne courante.
 
 ---
 
-🔁 **Étape 2 — Copie caractère par caractère**
+🔁 **Étape 2 — Copie caractère par caractère**  
 Une boucle interne copie les caractères tant que le zéro terminal n’est pas atteint :
 
 ```cpp
