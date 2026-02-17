@@ -594,7 +594,9 @@ if (millis() - tempsPrecedent >= 1000UL) {
   tempsPrecedent += 1000;
 }
 ```
-
+> Le projet utilise un ordonnancement périodique basé sur tempsPrecedent += intervalle, 
+> garantissant une cadence temporelle stable indépendante du temps d’exécution du code.
+> 
 - += 1000 évite la dérive (cadence stable à 1 Hz)
 - Pas de delay()
 
