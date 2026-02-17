@@ -521,10 +521,9 @@ Elle remplace volontairement l’usage des fonctions classiques comme `strcat()`
 L’appel de la fonction est :  
 
 ```cpp
-concatener(tabConcatenation, sizeof(tabConcatenation),
-           tabHeuresDizaine, tabHeuresUnite,
-           tabMinutesDizaine, tabMinutesUnite,
-           tabSecondesDizaine, tabSecondesUnite);
+void concatener(char *dst, uint8_t dstSize,
+                const char *a, const char *b, const char *c,
+                const char *d, const char *e, const char *f)
 ```
 
 On transmet donc :
