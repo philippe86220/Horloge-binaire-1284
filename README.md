@@ -568,7 +568,8 @@ Cela permet de :
   
 ---
 
-🔁 **Étape 1 — Parcours des chaînes source**  
+🔁 **Étape 1 — Parcours des chaînes source**   
+
 Une boucle for parcourt les six pointeurs :
 
 ```
