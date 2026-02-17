@@ -684,6 +684,27 @@ if (millis() - tempsPrecedent >= 1000UL) {
 - += 1000 évite la dérive (cadence stable à 1 Hz)
 - Pas de delay()
 
+## 📦 Dépendance logicielle : bibliothèque RTC
+
+Ce projet utilise la bibliothèque simpleRTC, développée pour les modules RTC DS1307 et DS3231.
+
+- Auteur : membre du forum Arduino (@bricoleau)
+- Sujet original :  
+  https://forum.arduino.cc/t/partage-librairie-simplertc-ds1307-ds3231-avec-heures-ete-hiver/376814
+  
+Cette bibliothèque permet notamment :
+
+- la lecture simplifiée de l’heure
+- la gestion automatique heure été / hiver
+- une interface très légère adaptée aux microcontrôleurs AVR
+  
+⚠️ Licence  
+
+Aucune licence explicite n’est mentionnée par l’auteur dans le sujet d’origine.  
+La bibliothèque n’est donc pas **redistribuée dans ce dépôt**.  
+L’utilisateur doit la télécharger directement depuis la source originale.
+
+---
 
 ## 👤 Auteur
 
