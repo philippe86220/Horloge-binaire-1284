@@ -297,7 +297,7 @@ La chaîne binaire est la **source unique de vérité**.
 
 ## 🔍 Déroulé du programme 
 
-1️⃣ Acquisition du temps
+### 1️⃣ Acquisition du temps
 
 ```cpp
 RTC.actualiser();
@@ -309,7 +309,7 @@ RTC.seconde();
 
 ---
 
-2️⃣ Séparation dizaines / unités
+### 2️⃣ Séparation dizaines / unités
 
 ```cpp
 constexpr uint8_t dizaine(uint8_t x) { return x / 10; }
@@ -317,7 +317,7 @@ constexpr uint8_t unite(uint8_t x)   { return x % 10; }
 ```
 ---
 
-3️⃣ Conversion décimale → binaire (explication ultra pédagogique)
+### 3️⃣ Conversion décimale → binaire (explication ultra pédagogique)
 
 🎯 **Objectif de la fonction**
 
@@ -486,7 +486,7 @@ w = 7 - nombre_de_bits
 ```
 --- 
 
-4️⃣ Fonction concatener() — explication pédagogique 
+### 4️⃣ Fonction concatener() — explication pédagogique 
 
 
 ```cpp
