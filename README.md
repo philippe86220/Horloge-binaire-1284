@@ -268,8 +268,8 @@ Or un chiffre décimal n’a pas toujours besoin de 8 bits pour être représent
 
 - les dizaines d’heures ne vont que de **0 à 2**
 - elles peuvent donc être codées sur seulement **2 bits**
-- afficher les 8 bits complets serait inutile car pour les dizaines d’heures
-  il n'n faut que **2**
+- afficher les 8 bits complets serait inutile car pour les dizaines d’heures  
+  il n'en faut que **2**
   
 👉 Le rôle de la fonction `binaire()` est donc de :  
 
