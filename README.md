@@ -258,18 +258,20 @@ Exemples :
 
 🧠 **Principe fondamental (à comprendre en premier)**
 
-> **L’ATmega1284 est un microcontrôleur 8 bits,**
-> mais **nous n’avons pas toujours besoin des 8 bits** pour afficher un chiffre.
+Même si l’ATmega1284 est un microcontrôleur 8 bits (c’est-à-dire que ses registres et son unité de calcul  
+traitent les données par blocs de 8 bits), cela ne signifie pas que toutes les informations doivent être   
+représentées sur 8 bits.    
+Dans ce projet, nous n’affichons pas des nombres complets, mais uniquement des chiffres décimaux   
+isolés (0 à 9).
 
-Exemples :
+Or un chiffre décimal n’a pas toujours besoin de 8 bits pour être représenté en binaire :
 
-- les **dizaines d’heures** ne vont que de `0` à `2`
-- afficher `2` avec 8 bits (`00000010`) n’a aucun intérêt
-- **2 bits suffisent** : `10`
-
-👉 Le rôle de la fonction binaire() est donc :
-- de regarder **les 8 bits** du nombre,
-- mais de **ne garder que les bits utiles.**
+- les dizaines d’heures ne vont que de **0 à 2**
+- elles peuvent donc être codées sur seulement **2 bits**
+- afficher les 8 bits complets serait inutile et peu lisible
+👉 Le rôle de la fonction `binaire()` est donc de :
+- examiner les 8 bits du nombre
+- mais ne conserver que les **bits réellement utiles pour l’affichage**
 
 ---
 
