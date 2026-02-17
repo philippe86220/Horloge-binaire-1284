@@ -286,8 +286,8 @@ binaire(valeur, w, buffer);
 - `w` : indique **combien de bits on ignore au début**
 - `buffer` : la chaîne `'0'/'1'` résultat
 
-⚠️ **Point clé pour le débutant**
-👉 w n’est pas le nombre de bits à écrire : 
+⚠️ **Point clé pour le débutant**  
+👉 w n’est pas le nombre de bits à écrire :   
 👉 c’est l’indice à partir duquel on commence à écrire, donc le nombre de positions ignorées au début.
 
 ---
