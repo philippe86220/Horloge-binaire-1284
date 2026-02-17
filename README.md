@@ -60,7 +60,7 @@ devient :
 4  → 100
 2  → 0010
 ```
-Chaque groupe de LED s’allume selon ces bits.
+Chaque groupe de LED s’allume selon ces bits et si ils sont à `1`.
 
 ---
 
@@ -70,7 +70,7 @@ Le microcontrôleur réalise en permanence la séquence suivante :
 1. Lire l’heure du module RTC
 2. Séparer chaque chiffre décimal
 3. Convertir chaque chiffre en binaire
-4. Allumer ou éteindre les LED correspondantes
+4. Allumer ou éteindre les LED correspondantes  → `1` = LED allumée, `0` = LED éteinte
    
 👉 Le programme ne “calcule pas l’heure” :  
 il se contente de traduire l’heure en états de LED.
