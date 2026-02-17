@@ -29,6 +29,8 @@ Une LED allumée signifie que son poids est présent dans la valeur du chiffre.
 
 ## 🔎 Exemple de lecture
 
+Si les LED correspondant aux poids 1 et 4 sont allumées :  
+
 ```
 4 + 1 = 5
 ```
@@ -43,7 +45,6 @@ Une horloge binaire ne montre pas directement l’heure :
 👉 elle montre la décomposition binaire de chaque chiffre décimal.  
 
 Par exemple :  
-Si les LED correspondant aux poids 1 et 4 sont allumées :  
 
 ```
 Heure : 19:37:42
