@@ -661,10 +661,11 @@ Le tableau `dst` devient alors une C-string valide contenant tous les bits.
 
 5️⃣ Affichage LED = lecture directe de la chaîne
 
+```cpp
 tabConcatenation[x] == '1'
   ? digitalWrite(pin, HIGH)
   : digitalWrite(pin, LOW);
-
+```
 Avec **trois plages :**
 - Heures
 - Minutes
