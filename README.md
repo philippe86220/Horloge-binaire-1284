@@ -316,8 +316,12 @@ RTC.seconde();
 ### 2️⃣ Tens / Units Separation
 
 ```cpp
-constexpr uint8_t dizaine(uint8_t x) { return x / 10; }
-constexpr uint8_t unite(uint8_t x)   { return x % 10; }
+uint8_t dizaine(uint8_t x) {
+  return  ((x) / 10);
+}
+uint8_t unite(uint8_t x) {
+  return ((x) % 10);
+}
 ```
 ---
 
