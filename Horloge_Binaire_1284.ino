@@ -8,10 +8,10 @@
 #include <Wire.h>
 #include "simpleRTC.h" // pin 16 : SCL - pin 17 SDA - sur uC SCL : 22 - SDA : 23
 
-constexpr  uint8_t dizaine(uint8_t x) {
+uint8_t dizaine(uint8_t x) {
   return  ((x) / 10);
 }
-constexpr  uint8_t unite(uint8_t x) {
+uint8_t unite(uint8_t x) {
   return ((x) % 10);
 }
 
