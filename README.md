@@ -156,7 +156,7 @@ Each decimal digit is represented in binary using LEDs organized by weights (1, 
 
 Choosing a **DS3231** RTC ensures excellent accuracy, independent of the microcontroller's internal clock.  
 Preferably avoid AliExpress-type modules; for example you can use:  
-https://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
+http://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
 
 ---
 
