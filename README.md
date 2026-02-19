@@ -132,7 +132,7 @@ Each decimal digit is represented in binary using LEDs organized by weights (1, 
 - Breakaway 2.54 mm female header strip (to plug in the DS3231 RTC module and remove it for time setting)
 - Voltage regulator **L7805ABP (TO-220)**
 - Red and green LEDs
-  - for example https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm
+  - for example [https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm](https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm)
   - https://www.gotronic.fr/art-led-5-mm-verte-l53lgd-2093.htm
 - 470 Ω resistors (depending on the LED and the desired brightness)
 - 1N4007 diode
