@@ -131,8 +131,8 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 -  Barrette femelle sécable 2,54 mm (pour enficher le module RTC DS3231 et l'enlever pour mise à l'heure)
 - Régulateur de tension **L7805ABP (TO-220)**
 - LEDs rouges et vertes
-  - par exemple https://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm
-  - https://www.gotronic.fr/art-led-5-mm-verte-l53lgd-2093.htm
+  - par exemple http://www.gotronic.fr/art-led-5-mm-rouge-l53lid-2091.htm
+  - http://www.gotronic.fr/art-led-5-mm-verte-l53lgd-2093.htm
 - Resistances 470 Ω (selon LED et luminosite voulue)
 - Diode 1N4007
 - Condensateurs de filtrage
@@ -155,7 +155,7 @@ Chaque chiffre décimal est représenté en **binaire**, à l’aide de LED orga
 
 Le choix d’un RTC **DS3231** garantit une excellente précision, indépendamment de l’horloge interne du microcontrôleur.  
 De prèférence évitez le module de type aliexpress, utilisez par exemple :   
-https://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
+http://www.gotronic.fr/art-module-rtc-i2c-ds3231-ada3013-24708.htm
 
 ---
 
