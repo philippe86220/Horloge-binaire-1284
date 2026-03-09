@@ -1,4 +1,4 @@
-/*  les fonctions 'dizaine' et 'unite' déclarées en tant que 'constexpr' permettent d'extraire les dizaines et unités pour les heures minutes et secondes en provenance du module DS3231
+/*  les fonctions 'dizaine' et 'unite' permettent d'extraire les dizaines et unités pour les heures minutes et secondes en provenance du module DS3231
     Ici on ne travaille qu'avec des chaines AZT pour en extraire entre autre des quartets.
     Toutes les secondes, les dizaines et unités des heures, minutes et secondes sont transformées en groupe de bits avec la fonction 'binaire'
     Enfin dans la loop (avec ma fonction : void concatener(), je concatène sous la forme d'une chaine AZT tous les bits constitutifs.
@@ -92,9 +92,10 @@ void setup() {
 void loop() {
 
 
-    if (millis() - tempsPrecedent >= 1000UL) {
+  if (millis() - tempsPrecedent >= 1000UL) {
+    tempsPrecedent = millis();
 
-      if (RTC.actualiser()) {
+    if (RTC.actualiser()) {
 
       uint8_t h = RTC.heure();
       uint8_t m = RTC.minute();
@@ -110,7 +111,7 @@ void loop() {
       binaire(heureUnite,    w_from_bits(4), tabHeuresUnite);
       binaire(minuteDizaine, w_from_bits(3), tabMinutesDizaine);
       binaire(minuteUnite,   w_from_bits(4), tabMinutesUnite);
-      binaire(secondeDizaine,w_from_bits(3), tabSecondesDizaine);
+      binaire(secondeDizaine, w_from_bits(3), tabSecondesDizaine);
       binaire(secondeUnite,  w_from_bits(4), tabSecondesUnite);
 
 
@@ -129,9 +130,9 @@ void loop() {
         tabConcatenation[x] == '1' ? digitalWrite( x + 5, HIGH) : digitalWrite( x + 5, LOW) ; // pins 18 - 19 - 20 - 21 - 22 - 23  (Secondes)
       }// 24 - 25 - 26 - 27 - 28 - 29 sur uC
       tabConcatenation[19] == '1' ? digitalWrite( 15, HIGH) : digitalWrite( 15, LOW) ; // pin 15  (dernier bit des Secondes) - pin 21 sur uC
-      
+
       //tempsPrecedent = millis();
-      tempsPrecedent += 1000; 
+      //tempsPrecedent += 1000;
 
     }
   }
