@@ -689,16 +689,13 @@ With **three ranges:**
 6️⃣ **Time Management**
 
 ```cpp
-if (millis() - previousTime >= 1000UL) {
+if (millis() - tempsPrecedent >= 1000UL) {
+    tempsPrecedent = millis();
   ...
-  previousTime += 1000;
 }
 ```
 
-> The project uses periodic scheduling based on `previousTime += interval`, ensuring stable timing independent of code execution duration.
-
-- `+= 1000` prevents drift (stable 1 Hz rate)
-- No `delay()` used
+👉  No `delay()` used
 
 ---
 
